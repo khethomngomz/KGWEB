@@ -1,201 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kgwerano Cleaning & Hygiene</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bubbles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="icon" href="cleaninglogo.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Kgwerano Cleaning & Hygiene</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="cleaninglogo.png" type="image/png" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bubbles CSS -->
+  <style>
+    #bubbles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: floatUp linear;
+      will-change: transform, opacity;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .bubble.pop {
+      animation: pop 0.3s forwards;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes pop {
+      to {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Bubbles Background -->
-    <div id="bubbles-container"></div>
+  <!-- Bubbles Background -->
+  <div id="bubbles-container"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <span class="kgwerano-logo">KGWERANO</span>
-                <span class="logo-subtitle">CLEANING & HYGIENE</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="kgwerano-logo">KGWERANO</span>
+        <span class="logo-subtitle">CLEANING & HYGIENE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <section class="about-hero" style="background-image: url('cleaningoffice.png');">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="lead">Get in touch for all your cleaning and hygiene needs</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-5">
+          <div class="contact-info">
+            <h2 class="mb-4">Contact Information</h2>
+            <div class="contact-item mb-3">
+              <div class="contact-icon"><i class="fas fa-globe"></i></div>
+              <div class="contact-text">
+                <h4>Website</h4>
+                <p>www.kgweranocleaning.com</p>
+              </div>
             </div>
+            <div class="contact-item mb-3">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>info@kgweranosupport.co.za</p>
+              </div>
+            </div>
+            <div class="contact-item mb-3">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+2772-898-2028</p>
+              </div>
+            </div>
+            <div class="contact-item mb-3">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-text">
+                <h4>Address</h4>
+                <p>873 Mamphake Sec, Ga Nashishi, Driakop 1129</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- Contact Hero Section -->
-    <section class="about-hero" style="background-image: url('cleaningoffice.png');">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p class="lead">Get in touch for all your cleaning and hygiene needs</p>
+        <div class="col-lg-6 mb-5">
+          <div class="contact-form">
+            <h2 class="mb-4">Send Us a Message</h2>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="contact-info">
-                        <h2 class="mb-4">Contact Information</h2>
-                        <div class="contact-item mb-3">
-                            <div class="contact-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Website</h4>
-                                <p>www.kgweranocleaning.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item mb-3">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p>info@kgweranosupport.co.za</p>
-                            </div>
-                        </div>
-                        <div class="contact-item mb-3">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <p>+2772-898-2028</p>
-                            </div>
-                        </div>
-                        <div class="contact-item mb-3">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Address</h4>
-                                <p>873 Mamphake Sec, Ga Nashishi, Driakop 1129</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="contact-form">
-                        <h2 class="mb-4">Send Us a Message</h2>
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone">
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.123456789012!2d28.12345678901234!3d-26.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA3JzI0LjQiUyAyOMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.123456789012!2d28.12345678901234!3d-26.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA3JzI0LjQiUyAyOMKwMDcnMjQuNCJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h3>Kgwerano</h3>
-                    <p>CLEANING & HYGIENE</p>
-                    <p>Our goal is to enhance the appearance and ambiance of our clients' workplaces.</p>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-globe me-2"></i> www.kgweranocleaning.com</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@kgweranocleaning.co.za</p>
-                    <p><i class="fas fa-phone me-2"></i> +2772-898-2028</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> 873 Mamphake Sec, Ga Nashishi, Driakop 1129</p>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Kgwerano Cleaning & Hygiene Supply (Pty) Ltd. All rights reserved.</p>
-            </div>
+  <!-- Footer -->
+  <footer class="footer py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h3>Kgwerano</h3>
+          <p>CLEANING & HYGIENE</p>
+          <p>Our goal is to enhance the appearance and ambiance of our clients' workplaces.</p>
         </div>
-    </footer>
+        <div class="col-lg-4 mb-4">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-globe me-2"></i> www.kgweranocleaning.com</p>
+          <p><i class="fas fa-envelope me-2"></i> info@kgweranocleaning.co.za</p>
+          <p><i class="fas fa-phone me-2"></i> +2772-898-2028</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> 873 Mamphake Sec, Ga Nashishi, Driakop 1129</p>
+        </div>
+      </div>
+      <hr />
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Kgwerano Cleaning & Hygiene Supply (Pty) Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="bubbles.js"></script>
-    <script src="main.js"></script>
-    <script>
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the data to a server
-            // For now, we'll just show an alert
-            alert(`Thank you, ${name}! Your message has been received. We'll contact you soon at ${email}.`);
-            
-            // Reset the form
-            this.reset();
-        });
-    </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Form Submission Handler -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      alert(`Thank you, ${name}! Your message has been received. We'll contact you soon at ${email}.`);
+      this.reset();
+    });
+  </script>
+
+  <!-- Floating Bubbles Script -->
+  <script>
+    const bubblesContainer = document.getElementById("bubbles-container");
+
+    function createBubble() {
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+
+      const size = Math.random() * 20 + 10;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      bubble.style.opacity = Math.random();
+
+      bubblesContainer.appendChild(bubble);
+
+      setTimeout(() => {
+        bubble.remove();
+      }, 15000);
+
+      if (Math.random() < 0.3) {
+        setTimeout(() => {
+          bubble.classList.add("pop");
+          setTimeout(() => bubble.remove(), 300);
+        }, Math.random() * 8000);
+      }
+    }
+
+    setInterval(createBubble, 500);
+  </script>
 </body>
 </html>

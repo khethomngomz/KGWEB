@@ -1,167 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Kgwerano Cleaning & Hygiene</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bubbles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="icon" href="cleaninglogo.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Kgwerano Cleaning & Hygiene</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="bubbles.css"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="icon" href="cleaninglogo.png" type="image/png"/>
+
+  <!-- Bubbles CSS -->
+ <style>
+    /* Floating Bubbles CSS */
+    #bubbles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: floatUp linear;
+      will-change: transform, opacity;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .bubble.pop {
+      animation: pop 0.3s forwards;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes pop {
+      to {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Bubbles Background -->
-    <div id="bubbles-container"></div>
+ 
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <span class="kgwerano-logo">KGWERANO</span>
-                <span class="logo-subtitle">CLEANING & HYGIENE</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="kgwerano-logo">KGWERANO</span>
+        <span class="logo-subtitle">CLEANING & HYGIENE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero Section -->
+  <section class="about-hero" style="background-image: url('cleaningpencils.png');">
+    <div class="container">
+      <h1>About Kgwerano</h1>
+      <p class="lead">Providing superior cleaning services across South Africa</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="mb-4">Our Company</h2>
+          <p>Kgwerano Cleaning & Hygiene Supply (Pty) Ltd is a full-service commercial cleaning company that strives to provide a continuous and consistently superior cleaning service resulting in high levels of customer satisfaction.</p>
+          <p>Our goal is to enhance the appearance and ambiance of our clients' workplaces. Our cleaning services are provided on a contractual or once-off basis and we offer cleaning services for buildings, schools, government facilities, shopping centres and institutions.</p>
         </div>
-    </nav>
-
-    <!-- About Hero Section -->
-<section class="about-hero" style="background-image: url('cleaningpencils.png');">
-        <div class="container">
-            <h1>About Kgwerano</h1>
-            <p class="lead">Providing superior cleaning services across South Africa</p>
+        <div class="col-lg-6">
+          <img src="cleaningbrrom.png" alt="Kgwerano Cleaning Team" class="img-fluid rounded shadow"/>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Content -->
-    <section class="about-content py-5">
-      
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2 class="mb-4">Our Company</h2>
-                    <p>Kgwerano Cleaning & Hygiene Supply (Pty) Ltd is a full-service commercial cleaning company that strives to provide a continuous and consistently superior cleaning service resulting in high levels of customer satisfaction.</p>
-                    <p>Our goal is to enhance the appearance and ambiance of our clients' workplaces. Our cleaning services are provided on a contractual or once-off basis and we offer cleaning services for buildings, schools, government facilities, shopping centres and institutions.</p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="cleaningbrrom.png" alt="Kgwerano Cleaning Team" class="img-fluid rounded shadow">
-                </div>
+  <!-- Mission, Vision, Values -->
+  <section class="company-values py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="value-card p-4 h-100">
+            <div class="value-icon mb-3">
+              <i class="fas fa-bullseye"></i>
             </div>
+            <h3>Mission</h3>
+            <p>To change the face of business solutions landscape in South African by providing a highly competitive business to aspiring business people and existing entrepreneurs. We are committed to ensuring success by investing in staff training, maintaining profitability and recognition of socio-economic empowerment of the people.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Mission, Vision, Values -->
-    <section class="company-values py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="value-card p-4 h-100">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3>Mission</h3>
-                        <p>To change the face of business solutions landscape in South African by providing a highly competitive business to aspiring business people and existing entrepreneurs. We are committed to ensuring success by investing in staff training, maintaining profitability and recognition of socio-economic empowerment of the people.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="value-card p-4 h-100">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Vision</h3>
-                        <p>To be seen as a company that is people-driven, aimed at minimizing and eradicating poverty and unemployment in the country by creating sustainable job opportunities, empowering local communities, and nurturing a culture of skills development and growth.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="value-card p-4 h-100">
-                        <div class="value-icon mb-3">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Values</h3>
-                        <p>Becoming the leading supplier and distribution of business to all our stakeholders. We aim to develop a company that will share the vision of its directors and its stakeholders. We believe that ultimately we will maximize our profits and to maintain long term partnership with our entire stakeholders.</p>
-                    </div>
-                </div>
+        <div class="col-md-4 mb-4">
+          <div class="value-card p-4 h-100">
+            <div class="value-icon mb-3">
+              <i class="fas fa-eye"></i>
             </div>
+            <h3>Vision</h3>
+            <p>To be seen as a company that is people-driven, aimed at minimizing and eradicating poverty and unemployment in the country by creating sustainable job opportunities, empowering local communities, and nurturing a culture of skills development and growth.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Manufacturing Info -->
-    <section class="manufacturing-info py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                   <h2 class="mb-4">OFFICE & CLEANING SOLUTIONS</h2>
-<p>From top-quality cleaning products to essential office supplies, we provide everything your workplace needs to run smoothly and stay spotless.</p>
-<p>Our services also include reliable maintenance and repair of office equipment, such as printers, laptops, and more — all handled by our skilled in-house technicians.</p>
-<a href="products.html" class="btn btn-primary mt-3">Explore Our Products</a>
-
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <img src="cleaningmatst.png" alt="Kgwerano Manufacturing" class="img-fluid rounded shadow">
-                </div>
+        <div class="col-md-4 mb-4">
+          <div class="value-card p-4 h-100">
+            <div class="value-icon mb-3">
+              <i class="fas fa-heart"></i>
             </div>
+            <h3>Values</h3>
+            <p>Becoming the leading supplier and distribution of business to all our stakeholders. We aim to develop a company that will share the vision of its directors and its stakeholders. We believe that ultimately we will maximize our profits and to maintain long term partnership with our entire stakeholders.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h3>Kgwerano</h3>
-                    <p>CLEANING & HYGIENE</p>
-                    <p>Our goal is to enhance the appearance and ambiance of our clients' workplaces.</p>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-globe me-2"></i> www.kgweranocleaning.com</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@kgweranocleaning.co.za</p>
-                    <p><i class="fas fa-phone me-2"></i> +2772-898-2028</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> 873 Mamphake Sec, Ga Nashishi, Driakop 1129</p>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Kgwerano Cleaning & Hygiene Supply (Pty) Ltd. All rights reserved.</p>
-            </div>
+  <!-- Manufacturing Info -->
+  <section class="manufacturing-info py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <h2 class="mb-4">OFFICE & CLEANING SOLUTIONS</h2>
+          <p>From top-quality cleaning products to essential office supplies, we provide everything your workplace needs to run smoothly and stay spotless.</p>
+          <p>Our services also include reliable maintenance and repair of office equipment, such as printers, laptops, and more — all handled by our skilled in-house technicians.</p>
+          <a href="products.html" class="btn btn-primary mt-3">Explore Our Products</a>
         </div>
-    </footer>
+        <div class="col-lg-6 order-lg-1">
+          <img src="cleaningmatst.png" alt="Kgwerano Manufacturing" class="img-fluid rounded shadow"/>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="bubbles.js"></script>
-    <script src="main.js"></script>
+  <!-- Footer -->
+  <footer class="footer py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h3>Kgwerano</h3>
+          <p>CLEANING & HYGIENE</p>
+          <p>Our goal is to enhance the appearance and ambiance of our clients' workplaces.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-globe me-2"></i> www.kgweranocleaning.com</p>
+          <p><i class="fas fa-envelope me-2"></i> info@kgweranocleaning.co.za</p>
+          <p><i class="fas fa-phone me-2"></i> +2772-898-2028</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> 873 Mamphake Sec, Ga Nashishi, Driakop 1129</p>
+        </div>
+      </div>
+      <hr/>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2025 Kgwerano Cleaning & Hygiene Supply (Pty) Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="main.js"></script>
+
+  <!-- Bubbles JS -->
+  <!-- Bubbles Script -->
+  <script>
+    const bubblesContainer = document.getElementById("bubbles-container");
+
+    function createBubble() {
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+
+      const size = Math.random() * 20 + 10;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      bubble.style.opacity = Math.random();
+
+      bubblesContainer.appendChild(bubble);
+
+      setTimeout(() => {
+        bubble.remove();
+      }, 15000);
+
+      if (Math.random() < 0.3) {
+        setTimeout(() => {
+          bubble.classList.add("pop");
+          setTimeout(() => bubble.remove(), 300);
+        }, Math.random() * 8000);
+      }
+    }
+
+    setInterval(createBubble, 500);
+  </script>
 </body>
 </html>
